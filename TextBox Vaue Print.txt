@@ -1,0 +1,53 @@
+React Native TextInput is a basic component that allows the user to enter text, number, password etc. 
+It has an onChangeText prop which requires a function which will be called every time when the text changes, 
+and it also has a value prop that can set a default value into it.
+To Import TextInput in the Code
+
+import { TextInput } from 'react-native'
+
+Render Using
+
+<TextInput placeholder = "Email" onChangeText = {this.state.email}/>
+
+//This is an example code to understand TextInput// 
+import React from 'react';
+//import react in our code.
+import { TextInput, View, StyleSheet, Text } from 'react-native';
+//import all the components we are going to use. 
+export default class App extends React.Component {
+ constructor(props) {
+   super(props);
+   this.state = {
+     username: ''
+   };
+ }
+ render() {
+   return (
+     <View style={styles.container}>
+       <Text style={{color: 'cyan'}}>{this.state.username}</Text>
+       <TextInput
+         value={this.state.username}
+         onChangeText={(username) => this.setState({ username })}
+         placeholder={'Username'}
+         style={styles.input}
+       />
+     </View>
+   );
+ }
+}
+const styles = StyleSheet.create({
+ container: {
+   flex: 1,
+   alignItems: 'center',
+   justifyContent: 'center',
+   backgroundColor: '#ffffff',
+ },
+ input: {
+   width: 250,
+   height: 44,
+   padding: 10,
+   marginBottom: 10,
+   backgroundColor: '#ecf0f1'
+ },
+});
+ 

@@ -1,0 +1,33 @@
+
+React Native View – Most Basic Component For Building a UI.
+A view is a container which is used to hold multiple components. 
+Views are designed to be used with StyleSheet for clarity and performance, inline styles are also supported like CSS. 
+Whenever you have more than two components in your class (Which is your own component) you need to enclose them inside <View></View>
+
+To Import View in the Code
+import { View } from 'react-native'
+
+Render Using
+
+<View> Put all your components between this view component </View>
+
+Code : 
+
+//This is an example code to understand View//  
+import React from 'react';
+//import React in our code. 
+import { Text, View } from 'react-native';
+//import all the components we are going to use. 
+export default class App extends React.Component {
+  render() {
+    return (
+      // enclose all components in this View tag
+      <View>
+        {/* View is used here to wrap all component in one */}
+        <Text>All the very best</Text> 
+        <Text>This is your first App.</Text>
+        <Text>Enjoy react native coding.</Text>
+      </View>
+    );  
+  } 
+}

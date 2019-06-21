@@ -1,0 +1,60 @@
+React Native StatusBar is a component to show the indicators like the battery, network, notification etc. 
+React Native by default doesn’t understand the status bar and render the view from the top left corner of the screen and override the status bar. 
+To avoid that we need to give top margin for IOS and Android both but as you know the hight of status bar of both the platform is different 
+so we need a smart solution so here is the status bar which will help you to reserve the space for the StatusBar and you can start working directly.
+
+To Import StatusBar in Code
+
+import { StatusBar } from 'react-native'
+
+Render Using
+ 
+
+<StatusBar
+    barStyle = "dark-content"
+    // dark-content, light-content and default
+    hidden = {false}
+    //To hide statusBar
+    backgroundColor = "#00BCD4"
+    //Background color of statusBar
+    translucent = {false}
+    //allowing light, but not detailed shapes
+    networkActivityIndicatorVisible = {true}
+/>
+
+
+Code:
+
+//This is an example code for StatusBar// 
+import React, { Component } from 'react';
+//import react in our code. 
+import { StyleSheet, View, Text ,StatusBar, Platform  } from 'react-native';
+// import all basic components
+ 
+export default class App extends Component {
+  render() {
+    return (
+      <View style={styles.MainContainer}>
+       <StatusBar 
+        barStyle = "dark-content" 
+        // dark-content, light-content and default
+        hidden = {false}
+        //To hide statusBar
+        backgroundColor = "#00BCD4"
+        //Background color of statusBar
+        translucent = {false}
+        //allowing light, but not detailed shapes
+        networkActivityIndicatorVisible = {true}
+        />
+        <Text> Status Bar Example </Text>
+      </View>
+    );
+  }
+}
+const styles = StyleSheet.create({
+  MainContainer :{
+    justifyContent: 'center',
+    alignItems:'center',
+    flex:1,
+  }
+});

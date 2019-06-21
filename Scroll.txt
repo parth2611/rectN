@@ -1,0 +1,22 @@
+ React Native ScrollView is a component to wrap the content which is overflowing from the screen.
+ When you have any UI or text which is going after filling the while screen you can wrap it with ScrollView. 
+ScrollView is for both horizontal scroll and vertical scroll. You just need to add horizontal while adding a ScrollView tag <ScrollView horizontal>.
+
+
+
+To Import ScrollView in the Code
+
+
+import { ScrollView } from 'react-native'
+
+
+Render Using
+Default vertical Scroll
+
+<ScrollView>Long Text Here</ScrollView>
+
+Horizontal Scroll
+
+
+<ScrollView <span style="font-weight: 400;">horizontal</span>>Long Text Here</ScrollView>
+

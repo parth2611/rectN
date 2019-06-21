@@ -1,0 +1,26 @@
+React Native WebView is a component to render the web page into your mobile app. 
+This is supported by Android and IOs both. 
+WebView is very useful as you can open any web link in your app itself so when anybody wants to browse your referred link they don’t need to open any other app for that.
+
+To Import WebView in Code
+import { WebView} from 'react-native'
+
+Render Using
+<WebView source={{uri: 'http://akashsir.com'}}/>
+
+import React, { Component } from 'react';
+//import react in our code. 
+ 
+import { WebView } from 'react-native';
+//import all the components we are going to use. 
+ 
+export default class App extends Component {
+  render() {
+    return (
+       <WebView
+        source={{uri: 'http://akashsir.com'}}
+        style={{marginTop: 20}}
+      />
+    );
+  }
+}

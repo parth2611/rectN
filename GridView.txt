@@ -1,0 +1,91 @@
+GridView has the same popularity as Listview, both are used to arrange the items in a proper manner. 
+So here is the Example of GridView using FlatList in React Native.
+
+GridView can be used when we have to make a View Group that displays items in a two-dimensional, scrollable grid. 
+The most usable example of the Grid is the image gallery where we have to showcase all the images. In this example, we will use FlatList to make our GridView.  
+React Native FlatList is a simple list. It is among the simple but mostly used components.
+
+
+
+To import FlatList in your code use
+
+
+import { FlatList} from 'react-native'
+
+
+<FlatList
+  data={this.state.dataSource}
+  renderItem={({ item }) => (
+    <View style={{ flex: 1, flexDirection: 'column', margin: 1 }}>
+      <Image style={styles.imageThumbnail} source={{ uri: item.src }} />
+    </View>
+  )}
+  //Setting the number of column
+  numColumns={3}
+  keyExtractor={(item, index) => index}
+/>
+
+
+
+Code:
+
+/*This is an Example of Grid View in React Native*/
+import React, { Component } from 'react';
+//import rect in our project
+import {
+  StyleSheet,
+  View,
+  FlatList,
+  ActivityIndicator,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
+//import all the components we will need
+ 
+export default class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      dataSource: {},
+    };
+  }
+  componentDidMount() {
+    var that = this;
+    let items = Array.apply(null, Array(60)).map((v, i) => {
+      return { id: i, src: 'http://placehold.it/200x200?text=' + (i + 1) };
+    });
+    that.setState({
+      dataSource: items,
+    });
+  }
+  render() {
+    return (
+      <View style={styles.MainContainer}>
+        <FlatList
+          data={this.state.dataSource}
+          renderItem={({ item }) => (
+            <View style={{ flex: 1, flexDirection: 'column', margin: 1 }}>
+              <Image style={styles.imageThumbnail} source={{ uri: item.src }} />
+            </View>
+          )}
+          //Setting the number of column
+          numColumns={3}
+          keyExtractor={(item, index) => index}
+        />
+      </View>
+    );
+  }
+}
+ 
+const styles = StyleSheet.create({
+  MainContainer: {
+    justifyContent: 'center',
+    flex: 1,
+    paddingTop: 30,
+  },
+  imageThumbnail: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 100,
+  },
+});

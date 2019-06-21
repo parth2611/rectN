@@ -1,0 +1,56 @@
+React Native Slider is a component to select a single value from a range of values. 
+We have mostly seen slider while increasing or decreasing the volume or brightness of our phone. 
+Here is the example of the slider which will be helpful for you to integrate slider in your app.
+
+To Import Slider in Code
+
+import { Slider} from 'react-native'
+
+
+Render Using
+
+<Slider maximumValue='100' minimumValue='0' step='1' value='initial value'/>
+
+
+
+
+//This is an example code to understand Slider// 
+ 
+import React, { Component } from 'react';
+//import react in our code. 
+ 
+import {Slider,View, Text, StyleSheet } from 'react-native';
+//import all the components we are going to use. 
+ 
+export default class App extends Component {
+   constructor(props) {
+   super(props);
+   this.state = {
+     //Initial Value of slider
+     sliderValue: '15'
+   };
+ }
+ 
+  render() {
+    return (
+      <View style={styles.container}>
+        {/*Text to show slider value*/}
+        <Text style={{color: 'black'}}>Value of slider is : {this.state.sliderValue}</Text>
+      
+        {/*Slider with max, min, step and initial value*/}
+        <Slider maximumValue='20' minimumValue='0' step='1' value={this.state.sliderValue}
+          onValueChange={(sliderValue) => this.setState({ sliderValue })}
+        />
+      
+      </View>
+    );
+  }
+}
+const styles = StyleSheet.create({
+ container: {
+   flex: 1,
+   padding:20,
+   justifyContent: 'center',
+   backgroundColor: '#ecf0f1',
+ }
+});

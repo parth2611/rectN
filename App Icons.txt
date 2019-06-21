@@ -1,0 +1,26 @@
+Setting App Icon in Android applications
+To change the Android application Icon you need to navigate to res directory in your project. Follow the following path
+
+Your_Project -> android -> app -> src -> main -> res
+
+
+https://makeappicon.com/
+
+Replace the default icons with Newly downloaded icons that are available in the android folder.
+
+
+
+Now open the terminal again and run the project again using react-native run-android
+
+
+
+Setting App Icon in IOS applications
+
+
+
+To change the IOS application Icon  Goto -> Your_Project -> ios and open the Xcodeproj file in Xcode.
+
+
+
+After successfully opening of the project in Xcode double click on Images.xcassets .
+

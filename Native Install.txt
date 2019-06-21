@@ -1,0 +1,36 @@
+React Native Cli 
+
+Download Nodejs
+Download Android Studio 
+Download Android Virtual Device 
+
+Run Android Virtual Device
+
+
+
+Command to Install
+
+	npm install -g react-native-cli
+
+
+Creating a new application
+
+
+	react-native init AwesomeProject
+
+
+Directory Location 
+
+	cd AwesomeProject
+
+Run Android Virtual Device 
+	
+	react-native run-android
+
+
+Program will run in Android Device 
+
+To Refresh Control press R Two Time
+
+
+

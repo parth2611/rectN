@@ -1,0 +1,23 @@
+ React Native Button component to perform a click event. 
+It is in one of the user interface control component for handling touches. 
+If you want to use a simple button to click and 
+show result then Button is enough but if you want a stylish button then there are some limitations which make us suggest 
+you use alternates like TouchableOpacity which are very easy to use and will provide you to style better.
+
+Button has the prop “color” to change the color but other than that you can not style it as Button does not support “style” prop.
+
+You can’t set text the like <Button>txt</Button> but only via the title property <Button title="txt" />
+
+To Import Button in the Code
+
+import { Button} from 'react-native'
+
+
+
+Render Using
+
+
+<Button 
+    onPress={handlerFunction} 
+    title="Click Here"
+    color="#0000ff"/>

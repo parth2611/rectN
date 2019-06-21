@@ -1,0 +1,43 @@
+Example to Detect Device is Android or IOS in React Native includes the use of React Native Platform Component. 
+As the topic name describes itself, we will detect the Device is Android or IOS.  
+This is very useful while we have to load different elements according to the different OS. We will use Platform component to detect the Platform. 
+So let’s get started.
+
+
+To import Platform
+import { Platform} from 'react-native'
+
+Detect Device Using
+
+Platform.OS //This will return OS name ios/android
+
+
+
+Code :
+
+/*This is an Example to Detect Device is IOS or Android in React Native*/
+import React, { Component } from 'react';
+//import react in our project
+import { View, Text, Platform } from 'react-native';
+//import all the components we will need
+ 
+export default class App extends Component {
+  render() {
+    return (
+      <View
+        style={{
+          flex: 1,
+          justifyContent: 'center',
+        }}>
+        <Text
+          style={{
+            fontSize: 24,
+            textAlign: 'center',
+          }}>
+          {/*Here is Platform to get device type*/}
+          {Platform.OS === 'ios' ? 'Device is IOS' : 'Device is Android'}
+        </Text>
+      </View>
+    );
+  }
+}

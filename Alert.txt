@@ -1,0 +1,15 @@
+import React from 'react';
+import {  Text, View ,Alert } from 'react-native';
+
+ 
+export default class App extends React.Component {
+  render() {
+    Alert.alert('You tapped the button!')
+    return (
+      <View >
+        <Text>Hi I am Alert Demo</Text>
+      </View>
+    );
+  }
+}
+ 
